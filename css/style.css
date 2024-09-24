@@ -828,6 +828,13 @@ form label {
   font-weight: normal !important;
 }
 
+#fh5co-header {
+    background-image: url(images/bg.jpg); /* Set your background image */
+    background-position: center center; /* Center the image */
+    background-size: cover; /* Ensure it covers the entire header */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
 #fh5co-header .display-tc,
 #fh5co-counter .display-tc,
 .fh5co-cover .display-tc {
