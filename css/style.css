@@ -304,6 +304,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   width: 100%;
 }
+
 .fh5co-cover .overlay {
   z-index: 0;
   position: absolute;
@@ -828,13 +829,6 @@ form label {
   font-weight: normal !important;
 }
 
-#fh5co-header {
-    background-image: url(images/bg.jpg); /* Set your background image */
-    background-position: center center; /* Center the image */
-    background-size: cover; /* Ensure it covers the entire header */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-}
-
 #fh5co-header .display-tc,
 #fh5co-counter .display-tc,
 .fh5co-cover .display-tc {
@@ -959,6 +953,7 @@ form label {
 
 #fh5co-testimonial,
 #fh5co-services,
+#fh5co-rsvp,
 #fh5co-started,
 #fh5co-footer,
 #fh5co-event,
@@ -972,6 +967,7 @@ form label {
 @media screen and (max-width: 768px) {
   #fh5co-testimonial,
   #fh5co-services,
+  #fh5co-rsvp,
   #fh5co-started,
   #fh5co-footer,
   #fh5co-event,
@@ -1808,6 +1804,138 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+}
+
+/* General styling for form input groups */
+.form-input-group {
+  width: 100%;
+  height: 55px;
+  margin: 0 auto 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: left;
+  position: relative;
+}
+
+/* Icons inside RSVP form input groups */
+.form-input-group i {
+  color: #8f8f8e;
+  font-size: 14px;
+}
+
+/* Styling for the separator line after the icon */
+.form-input-group i:after {
+  content: "";
+  height: 30px;
+  width: 1px;
+  border-right: solid 1px #e6e9ea;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+/* Positioning specific icons (user, users, envelope, key) */
+.form-input-group i.fa-user,
+.form-input-group i.fa-users,
+.form-input-group i.fa-envelope,
+.form-input-group i.fa-phone,
+.form-input-group i.fa-cutlery,
+.form-input-group .fa-key {
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+}
+
+/* Input field styling inside RSVP form */
+.form-input-group input {
+  padding-left: 68px; /* Ensures space for the icon and separator */
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  border: none;
+}
+
+.form-input-group textarea {
+  padding-left: 68px; 
+  padding-top: 15px;
+  width: 100%;
+  height: 8em;
+  border: none;
+  resize: none; /* Prevents the user from resizing the text area */
+  outline: none; /* Removes default focus outline */
+  border-radius: 6px;
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+/* Placeholder styling for cross-browser consistency */
+.form-input-group input::-webkit-input-placeholder {
+  color: #bcc1c3;
+}
+.form-input-group textarea::-webkit-input-placeholder {
+  color: #bcc1c3;
+}
+.form-input-group input:-moz-placeholder {
+  color: #bcc1c3;
+}
+.form-input-group input::-moz-placeholder {
+  color: #bcc1c3;
+}
+.form-input-group input:-ms-input-placeholder {
+  color: #bcc1c3;
+}
+.form-input-group textarea:-ms-input-placeholder {
+  color: #bcc1c3;
+}
+
+/* Button Styling */
+.btn-fill {
+  color: #fff;
+  border: solid 2px #8f8f8e;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #8f8f8e;
+  justify-content: center;
+}
+
+.btn-fill:hover,
+.btn-fill:focus {
+  color: #fff;
+  background-color: gray;
+  border-color: gray;
+}
+
+.rsvp-btn {
+  justify-content: center;
+  margin-top:70px;
+  border-radius: 15px;
+  width: 20%;
+  Height: 40px;
+  font-size: 13px;
+}
+
+.plus-one-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align everything to the left */
+  width: 100%;
+}
+
+.plus-one-label input[type="checkbox"] {
+  margin-left: 10px; /* Adds space between text and checkbox */
+}
+
+.row {
+  margin-top:1px;
+}
+
+.row-warp {
+  margin-top:70px;
 }
 
 /*# sourceMappingURL=style.css.map */

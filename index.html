@@ -50,6 +50,12 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- User icon style  -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="css/styles.min.css">--->
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">--->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">--->
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -73,6 +79,7 @@
 						<li class="active"><a href="#fh5co-event">Events</a></li>
 						<li class="active"><a href="#fh5co-gallery">Gallery</a></li>
 						<li class="active"><a href="#fh5co-services">Highlights</a></li>
+						<li class="active"><a href="#fh5co-rsvp">RSVP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -95,7 +102,7 @@
 							<div class="flipTimebox">
 								<div class="clock clock-fix"></div>
 							  </div>
-							<p><a href="#fh5co-event" class="btn btn-default btn-sm">Save our date</a></p>
+							<p><a href="#fh5co-rsvp" class="btn btn-default btn-sm">Save our date</a></p>
 						</div>
 					</div>
 				</div>
@@ -181,16 +188,11 @@
 
 	<div id="fh5co-services" class="fh5co-section-gray">
 		<div class="container">
-			
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Highlights</h2>
-
 				</div>
 			</div>
-
-
-
 				<div class="container animate-box">
 					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
 						<a href="https://www.youtube.com/watch?v=Ev_-gOW-gMo" class="popup-vimeo"><i class="icon-video2"></i></a>
@@ -198,9 +200,117 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
 	</div>
+
+
+
+    <div id="fh5co-rsvp" class="fh5co-section-gray">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>RSVP</h2>
+					<br><br>
+					<p>We would greatly appreciate if you could RSVP before 15th of February 2025</p>
+					<form id="rsvp-form" class="rsvp-form"
+						  action="https://script.google.com/macros/s/AKfycbyGx48NddqaHNTmsOuQesULH56c5UL4v--NDXqux8gNE9bZPSG9YO-IenqjMbQ0ClJIIg/exec"
+						  method="POST">
+						
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-input-group">
+									<i class="fa fa-user"></i><input name="FirstName" class=""
+																	placeholder="Your first name"
+																	required>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-sm-6">
+								<div class="form-input-group">
+									<i class="fa fa-user"></i><input name="LastName" class=""
+																	placeholder="Your last name"
+																	required>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="form-input-group">
+									<i class="fa fa-envelope"></i>
+									<input type="email" name="Email" placeholder="Your email" class="" required>
+								</div>
+							</div>
+
+
+							<div class="col-md-6 col-sm-6">
+								<div class="form-input-group">
+									<i class="fa fa-phone"></i>
+									<input type="tel" name="Tel" placeholder="Your phone number" class="" required>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<label>
+									Do you have a plus one?
+									<input type="checkbox" id="plusOneCheckbox" name="Extras" value="1">
+								</label>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12" id="extrasField" style="display: none;">
+								<div class="form-input-group">
+									<i class="fa fa-user"></i><input name="ExtrasName" class=""
+																	placeholder="Full name of your plus one">
+								</div>
+							</div>
+
+							<script>
+								// JavaScript to toggle visibility of the extrasField
+								document.getElementById('plusOneCheckbox').addEventListener('change', function () {
+									const extrasField = document.getElementById('extrasField');
+									if (this.checked) {
+										extrasField.style.display = 'block';
+										extrasField.querySelector('input').setAttribute('required', 'true');
+									} else {
+										extrasField.style.display = 'none';
+										extrasField.querySelector('input').removeAttribute('required');
+									}
+								});
+							</script>
+ 						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-sm-12">
+								<div class="form-input-group">
+									<i class="fa fa-cutlery"></i>
+									<textarea type="text" name="Requirements" placeholder="Your dietary requirements" class="" required></textarea>
+								</div>
+							</div>
+						</div>
+
+						<div class="row-warp">
+							<div class="col-md-12" id="alert-wrapper"></div>
+						</div>
+
+						<div class="row-warp">
+							<div class="col-md-12" id="thankyou-msg"></div>
+						</div>
+
+						<button class="btn-fill rsvp-btn">
+							Submit
+						</button>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
@@ -228,10 +338,11 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
 
+
 	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<center>View Source Code on <a href="https://github.com/shyamjos/wedding-website">GitHub <img src="images/github-logo.png"> </a> </center>
+	<center>The website was crafted by Min, and critiqued by Adam and Min’s ever-helpful colleagues at Digital Solutions, who never miss a chance to point out a typo. <img src="images/github-logo.png"> </a> </center>
 	</body>
 </html>
